@@ -9,23 +9,23 @@ post_install() {
 	# Level 1
 	for SIG in 'picnicL1full' 'dilithium2aes' 'falcon512' 'sphincsharaka128fsimple'
 	do
-		ssh-keygen -t ssh-$SIG -f /etc/ssh/ssh_host_key_$SIG
-		ssh-keygen -t ssh-rsa3072-$SIG -f /etc/ssh/ssh_host_key_rsa3072_$SIG
-		ssh-keygen -t ssh-ecdsa-nistp256-$SIG -f /etc/ssh/ssh_host_key_ecdsa_nistp256_$SIG
+		ssh-keygen -q -N "" -t ssh-$SIG -f /etc/ssh/ssh_host_key_$SIG
+		ssh-keygen -q -N "" -t ssh-rsa3072-$SIG -f /etc/ssh/ssh_host_key_rsa3072_$SIG
+		ssh-keygen -q -N "" -t ssh-ecdsa-nistp256-$SIG -f /etc/ssh/ssh_host_key_ecdsa_nistp256_$SIG
 	done
 
 	# Level 3
 	for SIG in 'picnicL3FS' 'dilithium3'
 	do
-		ssh-keygen -t ssh-$SIG -f /etc/ssh/ssh_host_key_$SIG
-		ssh-keygen -t ssh-ecdsa-nistp384-$SIG -f /etc/ssh/ssh_host_key_ecdsa_nistp384_$SIG
+		ssh-keygen -q -N "" -t ssh-$SIG -f /etc/ssh/ssh_host_key_$SIG
+		ssh-keygen -q -N "" -t ssh-ecdsa-nistp384-$SIG -f /etc/ssh/ssh_host_key_ecdsa_nistp384_$SIG
 	done
 
 	# Level 5
 	for SIG in 'falcon1024' 'dilithium5aes'
 	do
-		ssh-keygen -t ssh-$SIG -f /etc/ssh/ssh_host_key_$SIG
-		ssh-keygen -t ssh-ecdsa-nistp521-$SIG -f /etc/ssh/ssh_host_key_ecdsa_nistp521_$SIG
+		ssh-keygen -q -N "" -t ssh-$SIG -f /etc/ssh/ssh_host_key_$SIG
+		ssh-keygen -q -N "" -t ssh-ecdsa-nistp521-$SIG -f /etc/ssh/ssh_host_key_ecdsa_nistp521_$SIG
 	done
 }
 # 
